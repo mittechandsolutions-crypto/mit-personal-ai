@@ -165,7 +165,7 @@ function Composer({
           ))}
         </div>
       )}
-      {!compact && <div className="composer-note"><span className="lock-icon">◇</span>Your conversations are saved in MIT&apos;s local database.</div>}
+      {!compact && <div className="composer-note"><span className="lock-icon">◇</span>Your conversations are saved in MIT&apos;s conversation database.</div>}
     </div>
   );
 }
@@ -521,7 +521,7 @@ export default function MITWorkspace() {
 
         {view === "history" && (
           <section className="history-view">
-            <div className="directory-header"><div className="eyebrow">PICK UP WHERE YOU LEFT OFF</div><h1>Your history<span className="heading-period">.</span></h1><p>Your conversations are saved in MIT&apos;s local database.</p></div>
+            <div className="directory-header"><div className="eyebrow">PICK UP WHERE YOU LEFT OFF</div><h1>Your history<span className="heading-period">.</span></h1><p>Your conversations are saved in MIT&apos;s conversation database.</p></div>
             <div className="history-list">{conversations.length ? conversations.map((conversation) => <button className="history-item" key={conversation.id} onClick={() => void openConversation(conversation.id)}><span className="history-item-icon">✳</span><span className="history-item-copy"><strong>{conversation.title}</strong><small>{new Date(conversation.updatedAt).toLocaleString()} · {conversation.messageCount} messages</small></span><span className="profile-more">›</span></button>) : <div className="history-empty">No conversations yet. Start a chat with MIT and it will appear here.</div>}</div>
           </section>
         )}
